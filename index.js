@@ -1,12 +1,21 @@
 const myBulb = document.getElementById("myBulb");
-const onSwitchButton = document.querySelector("on-switch");
-const offSwitchButton = document.querySelector("off-switch");
+const onSwitchButton = document.getElementById("on-switch");
+const offSwitchButton = document.getElementById("off-switch");
+let notificationMessage = document.getElementById("notification-message");
 
-//Toggle by clicking the image
-myBulb.addEventListener("click", () => {
-    if (myBulb.src.includes("on-switch")) {
-        myBulb.src = "assets/pic_bulbon.gif";
-    } else {
-        myBulb.src = "assets/pic_bulbon.gif";
-    }
-});
+
+function updateMessage(isOn) {
+    notificationMessage.textContent = isOn
+    ? "Yo! Your light is on, Boss"
+    : "Your Light is off now, Boss";
+}
+
+onSwitchButton.addEventListener("click", function() {
+    myBulb.src = "assets/pic_bulbon.gif";
+        updateMessage(true);
+})
+
+offSwitchButton.addEventListener("click", function() {
+    myBulb.src = "assets/pic_bulboff.gif";
+    updateMessage(false);
+})

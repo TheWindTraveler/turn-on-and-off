@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid white;
+    padding: 50px;
+    margin-top: 20px;
+}
+
+.button-wrapper{
+    margin-top: 20px;
+}
+
+.switch-btn{
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.switch-btn:hover{
+    background-color: rgb(14, 14, 143);
+    color: white;
+    transition: 1s ease;
+    border-bottom: 2px solid white;
+}
