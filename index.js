@@ -2,6 +2,8 @@ const myBulb = document.getElementById("myBulb");
 const onSwitchButton = document.getElementById("on-switch");
 const offSwitchButton = document.getElementById("off-switch");
 let notificationMessage = document.getElementById("notification-message");
+const toggleBtn = document.getElementById("toggle-theme")
+
 
 function notificationMessageTimeOut(duration = 4000) {
        setTimeout(() => {
@@ -27,4 +29,12 @@ offSwitchButton.addEventListener("click", function() {
     updateMessage(false);
     notificationMessage.style.display = "block";
     notificationMessageTimeOut()
+})
+
+
+toggleBtn.addEventListener("click", function() {
+    document.documentElement.classList.toggle("dark-mode");
+
+    const darkMode = document.documentElement.classList.contains("dark-mode");
+    toggleBtn.textContent = darkMode ? "☀️" : "🌙";
 })
