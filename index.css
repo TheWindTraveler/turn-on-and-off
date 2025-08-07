@@ -38,3 +38,12 @@ body{
     transition: 1s ease;
     border-bottom: 2px solid white;
 }
+
+.notification{
+    padding: 13px;
+    border-radius: 4px;
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    display: none;
+}
